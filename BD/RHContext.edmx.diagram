@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="633eda39e8e045b29558f2c1d191f94c" Name="Diagram1">
+        <EntityTypeShape EntityType="RRHHOrtizModel.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHOrtizModel.Candidato" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHOrtizModel.Capacitacione" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHOrtizModel.CapacitacionesCandidato" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHOrtizModel.Competencia" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHOrtizModel.CompetenciasCandidato" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHOrtizModel.Empleado" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHOrtizModel.ExperienciasLaborale" Width="1.5" PointX="5.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHOrtizModel.Idioma" Width="1.5" PointX="6" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHOrtizModel.IdiomasCandidato" Width="1.5" PointX="8.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHOrtizModel.Puesto" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <AssociationConnector Association="RRHHOrtizModel.FK__Empleados__Candi__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHOrtizModel.FK_Candidatos_Puestos_PuestoId1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHOrtizModel.FK_CapacitacionesCandidatos_Candidatos_CandidatoId" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHOrtizModel.FK_CompetenciasCandidatos_Candidatos_CandidatoId" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHOrtizModel.FK_ExperienciasLaborales_Candidatos_CandidatoId" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHOrtizModel.FK_IdiomasCandidatos_Candidatos_CandidatoId" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHOrtizModel.FK_CapacitacionesCandidatos_Capacitaciones_CapacitacionId" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHOrtizModel.FK_CompetenciasCandidatos_Competencias_CompetenciaId" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHOrtizModel.FK_IdiomasCandidatos_Idiomas_IdiomaId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
