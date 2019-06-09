@@ -36,5 +36,6 @@ namespace RRHHOrtiz.BD
         public virtual DbSet<Idioma> Idiomas { get; set; }
         public virtual DbSet<IdiomasCandidato> IdiomasCandidatos { get; set; }
         public virtual DbSet<Puesto> Puestos { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
     }
 }

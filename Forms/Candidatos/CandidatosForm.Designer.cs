@@ -52,6 +52,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -304,11 +305,25 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // bunifuCards1
+            // 
+            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BorderRadius = 5;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(1, 1);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(1166, 572);
+            this.bunifuCards1.TabIndex = 20;
+            // 
             // CandidatosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Ivory;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1062, 561);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnEliminar);
@@ -316,6 +331,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.bunifuCards1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CandidatosForm";
             this.Text = "CandidatosForm";
@@ -352,5 +368,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Capacitaciones;
         private System.Windows.Forms.DataGridViewTextBoxColumn Competencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn Recomendado;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
     }
 }

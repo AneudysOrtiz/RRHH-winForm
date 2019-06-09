@@ -1,4 +1,5 @@
 ﻿using RRHHOrtiz.BD;
+using RRHHOrtiz.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace RRHHOrtiz.Forms
 {
     public partial class DashboardForm : Form
     {
+        private string candidatos, empleados, puestos;
         public DashboardForm()
         {
             InitializeComponent();
@@ -20,12 +22,31 @@ namespace RRHHOrtiz.Forms
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            using(var db = new RRHHOrtizEntities())
+            
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            
+            using (var db = new RRHHOrtizEntities())
             {
-                lblCan.Text = db.Candidatos.Where(x => x.Estado == "Activo").Count().ToString();
-                lblEmp.Text = db.Empleados.Where(x => x.Estado).Count().ToString();
-                lblPuestos.Text = db.Puestos.Where(x => x.Estado).Count().ToString();
+                candidatos = db.Candidatos.Where(x => x.Estado == "Activo").Count().ToString();
+                empleados = db.Empleados.Where(x => x.Estado).Count().ToString();
+                puestos = db.Puestos.Where(x => x.Estado).Count().ToString();
             }
+        }
+
+        private void DashboardForm_Load(object sender, EventArgs e)
+        {
+            backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            lblNombre.Text = string.Format("Bienvenido {0}", EnvVariable.CurrentUser).ToUpper();
+            lblCan.Text = candidatos;
+            lblEmp.Text = empleados;
+            lblPuestos.Text = puestos;
         }
     }
 }

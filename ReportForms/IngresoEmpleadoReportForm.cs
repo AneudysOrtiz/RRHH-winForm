@@ -22,7 +22,7 @@ namespace RRHHOrtiz.ReportForms
             var objRpt = new ReportDocument();
             objRpt.Load(path);
 
-            RRHHOrtizDataSet ds = new RRHHOrtizDataSet();
+            var ds = new DataSet();
             DataTable t = ds.Tables.Add("Empleados");
             t.Columns.Add("EmpleadoId", Type.GetType("System.Int32"));
             t.Columns.Add("Cedula", Type.GetType("System.String"));
@@ -30,7 +30,7 @@ namespace RRHHOrtiz.ReportForms
             t.Columns.Add("FechaIngreso", Type.GetType("System.DateTime"));
             t.Columns.Add("Departamento", Type.GetType("System.String"));
             t.Columns.Add("Puesto", Type.GetType("System.String"));
-            t.Columns.Add("Salario", Type.GetType("System.Decimal"));
+            t.Columns.Add("Salario", Type.GetType("System.String"));
             t.Columns.Add("Estado", Type.GetType("System.Boolean"));
 
             DataRow r;
@@ -44,12 +44,12 @@ namespace RRHHOrtiz.ReportForms
                 r["FechaIngreso"] = empleados[i].FechaIngreso;
                 r["Departamento"] = empleados[i].Departamento;
                 r["Puesto"] = empleados[i].Puesto;
-                r["Salario"] = empleados[i].Salario;
+                r["Salario"] = empleados[i].Salario.ToString();
                 r["Estado"] = empleados[i].Estado;
                 t.Rows.Add(r);
             }
 
-            objRpt.SetDataSource(ds.Tables[11]);
+            objRpt.SetDataSource(ds.Tables[0]);
             crystalReportViewer1.ReportSource = objRpt;
             crystalReportViewer1.Refresh();
         }

@@ -31,8 +31,8 @@ namespace RRHHOrtiz.Forms.Candidatos
             db = new RRHHOrtizEntities();
 
             TituloLabel.Text = "Reportes de empleados";
-            panelRango.Hide();
-            panelSalario.Hide();
+            //panelSalario.Visible = false;
+            //panelSalario.Hide();
 
         }        
 
@@ -83,8 +83,9 @@ namespace RRHHOrtiz.Forms.Candidatos
             if (radioButton1.Checked)
             {
                 reportType = "IngresoFecha";
-                panelSalario.Hide();
-                panelRango.Show();
+                //panelRango.Location = panelSalario.Location;
+                panelSalario.Visible = false;
+                panelRango.Visible = true;
             }
         }
 
@@ -93,9 +94,21 @@ namespace RRHHOrtiz.Forms.Candidatos
             if (radioButton2.Checked)
             {
                 reportType = "RangoSalarial";
-                panelRango.Hide();
-                panelSalario.Show();
+                panelSalario.Location = panelRango.Location;
+                panelSalario.Size = panelRango.Size;
+                panelRango.Visible = false;
+                panelSalario.Visible = true;
             }
+        }
+
+        private void EmpleadosReportesForm_Load(object sender, EventArgs e)
+        {
+            panelSalario.Visible = true;
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePicker2.MinDate = dateTimePicker1.Value;
         }
     }
 }

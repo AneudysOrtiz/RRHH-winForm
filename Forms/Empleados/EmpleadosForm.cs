@@ -56,7 +56,7 @@ namespace RRHHOrtiz.Forms
         {
             if (filtro.SelectedItem == null)
                 return;
-
+        
             var list = new List<Empleado>();
             string param = busqueda.Text;
             string criterio = filtro.SelectedItem.ToString();

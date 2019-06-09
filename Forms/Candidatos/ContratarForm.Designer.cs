@@ -35,6 +35,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtRecomendado = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
@@ -56,8 +58,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtRecomendado = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -103,13 +104,14 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Ivory;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.bunifuCards1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
@@ -155,6 +157,25 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Empleo";
+            // 
+            // txtRecomendado
+            // 
+            this.txtRecomendado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRecomendado.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecomendado.Location = new System.Drawing.Point(510, 63);
+            this.txtRecomendado.Name = "txtRecomendado";
+            this.txtRecomendado.Size = new System.Drawing.Size(226, 23);
+            this.txtRecomendado.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(395, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 37);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Recomendado por";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // checkedListBox2
             // 
@@ -399,24 +420,19 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtRecomendado
+            // bunifuCards1
             // 
-            this.txtRecomendado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRecomendado.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRecomendado.Location = new System.Drawing.Point(510, 63);
-            this.txtRecomendado.Name = "txtRecomendado";
-            this.txtRecomendado.Size = new System.Drawing.Size(226, 23);
-            this.txtRecomendado.TabIndex = 25;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(395, 55);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 37);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Recomendado por";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BorderRadius = 5;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(-1, -1);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(787, 573);
+            this.bunifuCards1.TabIndex = 20;
             // 
             // ContratarForm
             // 
@@ -471,5 +487,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txtRecomendado;
         private System.Windows.Forms.Label label7;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
     }
 }

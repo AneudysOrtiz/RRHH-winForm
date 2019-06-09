@@ -25,6 +25,7 @@
         <AssociationConnector Association="RRHHOrtizModel.FK_CapacitacionesCandidatos_Capacitaciones_CapacitacionId" ManuallyRouted="false" />
         <AssociationConnector Association="RRHHOrtizModel.FK_CompetenciasCandidatos_Competencias_CompetenciaId" ManuallyRouted="false" />
         <AssociationConnector Association="RRHHOrtizModel.FK_IdiomasCandidatos_Idiomas_IdiomaId" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RRHHOrtizModel.Usuario" Width="1.5" PointX="8.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -33,6 +33,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCupo = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSalarioMax = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSalarioMin = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtRiesgo = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.busqueda = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,20 +49,13 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtRiesgo = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtSalarioMin = new System.Windows.Forms.NumericUpDown();
-            this.txtSalarioMax = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCupo = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSalarioMin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSalarioMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCupo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSalarioMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSalarioMin)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -102,6 +103,89 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo / Editar";
+            // 
+            // txtCupo
+            // 
+            this.txtCupo.Location = new System.Drawing.Point(86, 255);
+            this.txtCupo.Name = "txtCupo";
+            this.txtCupo.Size = new System.Drawing.Size(254, 26);
+            this.txtCupo.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 245);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 45);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Cupos disponibles";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtSalarioMax
+            // 
+            this.txtSalarioMax.Location = new System.Drawing.Point(86, 205);
+            this.txtSalarioMax.Maximum = new decimal(new int[] {
+            1215752191,
+            23,
+            0,
+            0});
+            this.txtSalarioMax.Name = "txtSalarioMax";
+            this.txtSalarioMax.Size = new System.Drawing.Size(254, 26);
+            this.txtSalarioMax.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 195);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 45);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Salario maximo";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtSalarioMin
+            // 
+            this.txtSalarioMin.Location = new System.Drawing.Point(86, 150);
+            this.txtSalarioMin.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.txtSalarioMin.Name = "txtSalarioMin";
+            this.txtSalarioMin.Size = new System.Drawing.Size(254, 26);
+            this.txtSalarioMin.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 140);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 45);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Salario minimo";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtRiesgo
+            // 
+            this.txtRiesgo.FormattingEnabled = true;
+            this.txtRiesgo.Items.AddRange(new object[] {
+            "Alto",
+            "Medio",
+            "Bajo"});
+            this.txtRiesgo.Location = new System.Drawing.Point(86, 96);
+            this.txtRiesgo.Name = "txtRiesgo";
+            this.txtRiesgo.Size = new System.Drawing.Size(254, 26);
+            this.txtRiesgo.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 45);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Nivel de riesgo";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // busqueda
             // 
@@ -208,94 +292,25 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label3
+            // bunifuCards1
             // 
-            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 45);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Nivel de riesgo";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtRiesgo
-            // 
-            this.txtRiesgo.FormattingEnabled = true;
-            this.txtRiesgo.Items.AddRange(new object[] {
-            "Alto",
-            "Medio",
-            "Bajo"});
-            this.txtRiesgo.Location = new System.Drawing.Point(86, 96);
-            this.txtRiesgo.Name = "txtRiesgo";
-            this.txtRiesgo.Size = new System.Drawing.Size(254, 26);
-            this.txtRiesgo.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 45);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Salario minimo";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtSalarioMin
-            // 
-            this.txtSalarioMin.Location = new System.Drawing.Point(86, 150);
-            this.txtSalarioMin.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.txtSalarioMin.Name = "txtSalarioMin";
-            this.txtSalarioMin.Size = new System.Drawing.Size(254, 26);
-            this.txtSalarioMin.TabIndex = 6;
-            // 
-            // txtSalarioMax
-            // 
-            this.txtSalarioMax.Location = new System.Drawing.Point(86, 205);
-            this.txtSalarioMax.Maximum = new decimal(new int[] {
-            1215752191,
-            23,
-            0,
-            0});
-            this.txtSalarioMax.Name = "txtSalarioMax";
-            this.txtSalarioMax.Size = new System.Drawing.Size(254, 26);
-            this.txtSalarioMax.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 195);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 45);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Salario maximo";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtCupo
-            // 
-            this.txtCupo.Location = new System.Drawing.Point(86, 255);
-            this.txtCupo.Name = "txtCupo";
-            this.txtCupo.Size = new System.Drawing.Size(254, 26);
-            this.txtCupo.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 245);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 45);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Cupos disponibles";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BorderRadius = 5;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(1151, 564);
+            this.bunifuCards1.TabIndex = 19;
             // 
             // PuestosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Ivory;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1078, 561);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnEliminar);
@@ -303,6 +318,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.bunifuCards1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PuestosForm";
             this.Text = "IdiomasForm";
@@ -310,11 +326,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCupo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSalarioMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSalarioMin)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSalarioMin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSalarioMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCupo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,5 +356,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown txtCupo;
         private System.Windows.Forms.Label label6;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
     }
 }

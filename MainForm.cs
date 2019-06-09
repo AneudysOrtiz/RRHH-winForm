@@ -14,9 +14,11 @@ namespace RRHHOrtiz
 {
     public partial class MainForm : Form
     {
+
         public MainForm()
         {
             InitializeComponent();
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -26,7 +28,10 @@ namespace RRHHOrtiz
 
         private void iconcerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dr = MessageBox.Show("Desea salir del sistema?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dr == DialogResult.Yes)            
+                Application.Exit();
         }
         private void iconmaximizar_Click(object sender, EventArgs e)
         {
@@ -111,6 +116,27 @@ namespace RRHHOrtiz
         {
             var form = new EmpleadosForm();
             AbrirFormInPanel(form, "Empleados");
+        }
+
+        private void btnslide_Click(object sender, EventArgs e)
+        {
+            if (MenuVertical.Width == 196)
+            {
+                MenuVertical.Width = 56;
+            }
+            else
+                MenuVertical.Width = 196;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var form = new DashboardForm();
+            AbrirFormInPanel(form, "Inicio");
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
         }
     }
 }

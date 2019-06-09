@@ -32,8 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CandidatoEditForm));
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.TituloLabel = new System.Windows.Forms.Label();
+            this.iconcerrar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtExp = new System.Windows.Forms.RichTextBox();
+            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,29 +53,25 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTel = new System.Windows.Forms.MaskedTextBox();
+            this.lblDir = new System.Windows.Forms.Label();
+            this.txtDir = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtCedula = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblDir = new System.Windows.Forms.Label();
-            this.txtDir = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtExp = new System.Windows.Forms.RichTextBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.iconcerrar = new System.Windows.Forms.PictureBox();
-            this.txtTel = new System.Windows.Forms.MaskedTextBox();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -96,9 +97,22 @@
             this.TituloLabel.Text = "Titulo";
             this.TituloLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // iconcerrar
+            // 
+            this.iconcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconcerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconcerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconcerrar.Image")));
+            this.iconcerrar.Location = new System.Drawing.Point(771, 12);
+            this.iconcerrar.Name = "iconcerrar";
+            this.iconcerrar.Size = new System.Drawing.Size(18, 18);
+            this.iconcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconcerrar.TabIndex = 2;
+            this.iconcerrar.TabStop = false;
+            this.iconcerrar.Click += new System.EventHandler(this.iconcerrar_Click);
+            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Ivory;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.groupBox3);
@@ -106,12 +120,23 @@
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.bunifuCards1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(803, 663);
             this.panel1.TabIndex = 3;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.DarkRed;
+            this.label12.Location = new System.Drawing.Point(12, 547);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(297, 16);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Los campos marcados con * son requeridos";
             // 
             // groupBox3
             // 
@@ -130,6 +155,34 @@
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Educacion";
+            // 
+            // txtExp
+            // 
+            this.txtExp.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExp.Location = new System.Drawing.Point(510, 136);
+            this.txtExp.Name = "txtExp";
+            this.txtExp.Size = new System.Drawing.Size(227, 82);
+            this.txtExp.TabIndex = 18;
+            this.txtExp.Text = "";
+            // 
+            // checkedListBox3
+            // 
+            this.checkedListBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox3.FormattingEnabled = true;
+            this.checkedListBox3.Location = new System.Drawing.Point(130, 136);
+            this.checkedListBox3.Name = "checkedListBox3";
+            this.checkedListBox3.Size = new System.Drawing.Size(227, 94);
+            this.checkedListBox3.TabIndex = 16;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(24, 136);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 16);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Idiomas";
             // 
             // label8
             // 
@@ -277,6 +330,42 @@
             this.label5.Text = "Puesto *";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Crimson;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(265, 581);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(114, 58);
+            this.btnEliminar.TabIndex = 9;
+            this.btnEliminar.Text = "Cancelar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(436, 581);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 58);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Guardar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtTel);
@@ -294,6 +383,46 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos personales";
+            // 
+            // txtTel
+            // 
+            this.txtTel.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTel.Location = new System.Drawing.Point(132, 78);
+            this.txtTel.Mask = "(000) 000-0000";
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(227, 23);
+            this.txtTel.TabIndex = 13;
+            // 
+            // lblDir
+            // 
+            this.lblDir.AutoSize = true;
+            this.lblDir.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDir.Location = new System.Drawing.Point(420, 78);
+            this.lblDir.Name = "lblDir";
+            this.lblDir.Size = new System.Drawing.Size(82, 16);
+            this.lblDir.TabIndex = 12;
+            this.lblDir.Text = "Direccion *";
+            this.lblDir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtDir
+            // 
+            this.txtDir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDir.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDir.Location = new System.Drawing.Point(512, 78);
+            this.txtDir.Name = "txtDir";
+            this.txtDir.Size = new System.Drawing.Size(227, 23);
+            this.txtDir.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(25, 78);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(78, 16);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Telefono *";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtCedula
             // 
@@ -339,132 +468,19 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // checkedListBox3
+            // bunifuCards1
             // 
-            this.checkedListBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Location = new System.Drawing.Point(130, 136);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(227, 94);
-            this.checkedListBox3.TabIndex = 16;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(24, 136);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 16);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Idiomas";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(25, 78);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 16);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Telefono *";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblDir
-            // 
-            this.lblDir.AutoSize = true;
-            this.lblDir.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDir.Location = new System.Drawing.Point(420, 78);
-            this.lblDir.Name = "lblDir";
-            this.lblDir.Size = new System.Drawing.Size(82, 16);
-            this.lblDir.TabIndex = 12;
-            this.lblDir.Text = "Direccion *";
-            this.lblDir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtDir
-            // 
-            this.txtDir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDir.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDir.Location = new System.Drawing.Point(512, 78);
-            this.txtDir.Name = "txtDir";
-            this.txtDir.Size = new System.Drawing.Size(227, 23);
-            this.txtDir.TabIndex = 11;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.DarkRed;
-            this.label12.Location = new System.Drawing.Point(12, 547);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(297, 16);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Los campos marcados con * son requeridos";
-            // 
-            // txtExp
-            // 
-            this.txtExp.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExp.Location = new System.Drawing.Point(510, 136);
-            this.txtExp.Name = "txtExp";
-            this.txtExp.Size = new System.Drawing.Size(227, 82);
-            this.txtExp.TabIndex = 18;
-            this.txtExp.Text = "";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Crimson;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(265, 581);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(114, 58);
-            this.btnEliminar.TabIndex = 9;
-            this.btnEliminar.Text = "Cancelar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(436, 581);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 58);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Guardar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // iconcerrar
-            // 
-            this.iconcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconcerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconcerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconcerrar.Image")));
-            this.iconcerrar.Location = new System.Drawing.Point(771, 12);
-            this.iconcerrar.Name = "iconcerrar";
-            this.iconcerrar.Size = new System.Drawing.Size(18, 18);
-            this.iconcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconcerrar.TabIndex = 2;
-            this.iconcerrar.TabStop = false;
-            this.iconcerrar.Click += new System.EventHandler(this.iconcerrar_Click);
-            // 
-            // txtTel
-            // 
-            this.txtTel.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel.Location = new System.Drawing.Point(132, 78);
-            this.txtTel.Mask = "(000) 000-0000";
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(227, 23);
-            this.txtTel.TabIndex = 13;
+            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BorderRadius = 5;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(-1, -1);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(803, 663);
+            this.bunifuCards1.TabIndex = 19;
             // 
             // CandidatoEditForm
             // 
@@ -478,6 +494,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CandidatoEditForm";
             this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -486,7 +503,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -528,5 +544,6 @@
         private System.Windows.Forms.TextBox txtDir;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.MaskedTextBox txtTel;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
     }
 }
