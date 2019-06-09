@@ -67,7 +67,12 @@ namespace RRHHOrtiz.Forms.Candidatos
                     break;
 
                 case "RangoSalarial":
-                    query.Where(x => x.Salario >= numericUpDown1.Value && x.Salario <= numericUpDown2.Value);
+                    var desde = numericUpDown1.Value;
+                    var hasta = numericUpDown2.Value;
+                    query.Where(x => x.Salario >= desde && x.Salario <= hasta);
+                    list = query.ToList();
+                    reportForm = new SalarioEmpleadosForm(list, desde, hasta);
+                    reportForm.Show();
                     break;
             }
             
@@ -109,6 +114,11 @@ namespace RRHHOrtiz.Forms.Candidatos
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             dateTimePicker2.MinDate = dateTimePicker1.Value;
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDown2.Minimum = numericUpDown1.Value;
         }
     }
 }

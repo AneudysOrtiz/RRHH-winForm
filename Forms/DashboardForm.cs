@@ -36,6 +36,11 @@ namespace RRHHOrtiz.Forms
             }
         }
 
+        private void panel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             backgroundWorker1.RunWorkerAsync();

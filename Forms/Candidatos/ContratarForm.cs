@@ -67,6 +67,7 @@ namespace RRHHOrtiz.Forms.Candidatos
                 using (var db = new RRHHOrtizEntities())
                 {
                     UpdateCandidato();
+
                     var find = db.Candidatos.Find(candidato.CadidatoId);                    
                     find = candidato;
                     find.Estado = "Contratado";
@@ -85,6 +86,8 @@ namespace RRHHOrtiz.Forms.Candidatos
                         Direccion = candidato.Direccion
                     };
                     db.Empleados.Add(emp);
+                    var puesto = db.Puestos.Find(candidato.PuestoId1);
+                    puesto.Cupo -= 1;
                     db.SaveChanges();
                 }
 
@@ -94,5 +97,6 @@ namespace RRHHOrtiz.Forms.Candidatos
             }
 
         }
+        
     }
 }

@@ -16,14 +16,14 @@ namespace RRHHOrtiz.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class ContratoTrabajo : ReportClass {
+    public class SalarioEmpleadosReport : ReportClass {
         
-        public ContratoTrabajo() {
+        public SalarioEmpleadosReport() {
         }
         
         public override string ResourceName {
             get {
-                return "ContratoTrabajo.rpt";
+                return "SalarioEmpleadosReport.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace RRHHOrtiz.Reports {
         
         public override string FullResourceName {
             get {
-                return "RRHHOrtiz.Reports.ContratoTrabajo.rpt";
+                return "RRHHOrtiz.Reports.SalarioEmpleadosReport.rpt";
             }
             set {
                 // Do nothing
@@ -90,7 +90,7 @@ namespace RRHHOrtiz.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Nombre {
+        public CrystalDecisions.Shared.IParameterField Parameter_SalarioDesde {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -98,57 +98,17 @@ namespace RRHHOrtiz.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Puesto {
+        public CrystalDecisions.Shared.IParameterField Parameter_SalarioHasta {
             get {
                 return this.DataDefinition.ParameterFields[1];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Salario {
-            get {
-                return this.DataDefinition.ParameterFields[2];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Cedula {
-            get {
-                return this.DataDefinition.ParameterFields[3];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Departamento {
-            get {
-                return this.DataDefinition.ParameterFields[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Direccion {
-            get {
-                return this.DataDefinition.ParameterFields[5];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_NombreCopia {
-            get {
-                return this.DataDefinition.ParameterFields[6];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedContratoTrabajo : Component, ICachedReport {
+    public class CachedSalarioEmpleadosReport : Component, ICachedReport {
         
-        public CachedContratoTrabajo() {
+        public CachedSalarioEmpleadosReport() {
         }
         
         [Browsable(false)]
@@ -185,7 +145,7 @@ namespace RRHHOrtiz.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            ContratoTrabajo rpt = new ContratoTrabajo();
+            SalarioEmpleadosReport rpt = new SalarioEmpleadosReport();
             rpt.Site = this.Site;
             return rpt;
         }

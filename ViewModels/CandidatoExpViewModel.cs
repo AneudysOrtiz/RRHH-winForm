@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RRHHOrtiz.Helpers
+namespace RRHHOrtiz.ViewModels
 {
-    public class EnvVariable
+    class CandidatoExpViewModel
     {
-        public static string CurrentUser { get; set; }
     }
 }

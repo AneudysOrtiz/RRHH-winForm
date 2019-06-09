@@ -1,4 +1,5 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 using RRHHOrtiz.BD;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,9 @@ using System.Windows.Forms;
 
 namespace RRHHOrtiz.ReportForms
 {
-    public partial class IngresoEmpleadoReportForm : Form
+    public partial class SalarioEmpleadosForm : Form
     {
-        public IngresoEmpleadoReportForm(List<Empleado> empleados)
+        public SalarioEmpleadosForm(List<Empleado> empleados, decimal desde, decimal hasta)
         {
             InitializeComponent();
 
@@ -50,6 +51,27 @@ namespace RRHHOrtiz.ReportForms
             }
 
             objRpt.SetDataSource(ds.Tables[0]);
+
+            ParameterFields myParams = new ParameterFields();
+            var myParam = new ParameterField();
+            myParam.ParameterFieldName = "SalarioDesde";
+            var myDiscreteValue = new ParameterDiscreteValue();
+            //myDiscreteValue.Value = string.Format("{0:C}", desde);
+            myDiscreteValue.Value = desde;
+            myParam.CurrentValues.Add(myDiscreteValue);
+            myParams.Add(myParam);
+
+            var myParam2 = new ParameterField();
+            myParam2.ParameterFieldName = "SalarioHasta";
+            var myDiscreteValue2 = new ParameterDiscreteValue();
+            //myDiscreteValue2.Value = string.Format("{0:C}", hasta);
+            myDiscreteValue2.Value = hasta;
+            myParam2.CurrentValues.Add(myDiscreteValue2);
+            myParams.Add(myParam2);
+
+            // Assign the params collection to the report viewer
+            crystalReportViewer1.ParameterFieldInfo = myParams;
+
             crystalReportViewer1.ReportSource = objRpt;
             crystalReportViewer1.Refresh();
         }

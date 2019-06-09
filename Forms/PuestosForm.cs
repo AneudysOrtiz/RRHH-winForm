@@ -153,5 +153,9 @@ namespace RRHHOrtiz.Forms
             }
         }
 
+        private void txtSalarioMin_ValueChanged(object sender, EventArgs e)
+        {
+            txtSalarioMax.Minimum = txtSalarioMin.Value;
+        }
     }
 }

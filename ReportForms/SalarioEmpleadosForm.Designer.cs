@@ -1,6 +1,6 @@
 ﻿namespace RRHHOrtiz.ReportForms
 {
-    partial class ContratoReportForm
+    partial class SalarioEmpleadosForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,27 +39,25 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = "\\\\Mac\\Home\\Documents\\Visual Studio 2015\\Projects\\RRHHOrtiz\\RRHHOrtiz\\Reports\\Cont" +
-    "ratoTrabajo.rpt";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1227, 793);
+            this.crystalReportViewer1.ReportSource = "\\\\Mac\\Home\\Documents\\Visual Studio 2015\\Projects\\RRHHOrtiz\\RRHHOrtiz\\Reports\\Sala" +
+    "rioEmpleadosReport.rpt";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1184, 659);
             this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // ContratoReportForm
+            // SalarioEmpleadosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1227, 793);
+            this.ClientSize = new System.Drawing.Size(1184, 659);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "ContratoReportForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ContratoReportForm";
+            this.Name = "SalarioEmpleadosForm";
+            this.Text = "SalarioEmpleadosForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        
+
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }

@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 namespace RRHHOrtiz.Forms
 {
-    public partial class IdiomasForm : Form
+    public partial class CompetenciasForm : Form
     {
         private RRHHOrtizEntities db;
         private int idSelected = 0;
 
-        public IdiomasForm()
+        public CompetenciasForm()
         {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace RRHHOrtiz.Forms
 
         private void LoadEntities()
         {
-            dataGridView1.DataSource = db.Idiomas.Select(x => new { IdiomaId = x.IdiomaId, Nombre = x.Nombre, Estado = x.Estado }).ToList();
+            dataGridView1.DataSource = db.Competencias.ToList();
         }
 
         private async void button1_Click(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace RRHHOrtiz.Forms
             switch (busq)
             {
                 case "Nombre":
-                    dataGridView1.DataSource = db.Idiomas.Where(x => x.Nombre.Contains(busqueda.Text)).Select(x => new { IdiomaId = x.IdiomaId, Nombre = x.Nombre, Estado = x.Estado }).ToList();
+                    dataGridView1.DataSource = db.Competencias.Where(x => x.Descripcion.Contains(busqueda.Text)).ToList();
                     break;
             }
         }
@@ -99,14 +99,15 @@ namespace RRHHOrtiz.Forms
             int rowindex = dataGridView1.CurrentCell.RowIndex;
             var id = dataGridView1.Rows[rowindex].Cells[0].Value;
 
-            Idioma entity = db.Idiomas.Find(id);
+            var entity = db.Competencias.Find(id);
             DialogResult dr = MessageBox.Show("Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             if (dr == DialogResult.Yes)
             {
                 if (entity != null)
                 {
-                    db.Idiomas.Remove(entity);
+                    entity.Estado = false;
+                    db.Competencias.AddOrUpdate(entity);
                     db.SaveChanges();
                     MessageBox.Show("Registro eliminado!");
                     LoadEntities();
@@ -124,14 +125,14 @@ namespace RRHHOrtiz.Forms
                 var loading = new LoadingForm();
                 BeginInvoke((Action)(() => loading.ShowDialog()));
 
-                var entity = new Idioma()
+                var entity = new Competencia()
                 {
-                    IdiomaId = idSelected,
-                    Nombre = txtNombre.Text,
-                    Estado = true
+                    CompetenciaId = idSelected,
+                    Descripcion = txtNombre.Text,
+                    Estado = comboBox1.SelectedItem.Equals("Activo")
                 };
 
-                db.Idiomas.AddOrUpdate(entity);
+                db.Competencias.AddOrUpdate(entity);
                 await db.SaveChangesAsync();
                 Clean();
                 LoadEntities();

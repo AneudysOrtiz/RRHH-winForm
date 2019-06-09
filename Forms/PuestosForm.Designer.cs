@@ -50,6 +50,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCupo)).BeginInit();
@@ -86,6 +88,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtCupo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtSalarioMax);
@@ -114,9 +118,9 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 245);
+            this.label6.Location = new System.Drawing.Point(6, 240);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 45);
+            this.label6.Size = new System.Drawing.Size(80, 56);
             this.label6.TabIndex = 9;
             this.label6.Text = "Cupos disponibles";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,6 +158,7 @@
             this.txtSalarioMin.Name = "txtSalarioMin";
             this.txtSalarioMin.Size = new System.Drawing.Size(254, 26);
             this.txtSalarioMin.TabIndex = 6;
+            this.txtSalarioMin.ValueChanged += new System.EventHandler(this.txtSalarioMin_ValueChanged);
             // 
             // label4
             // 
@@ -306,6 +311,31 @@
             this.bunifuCards1.Size = new System.Drawing.Size(1151, 564);
             this.bunifuCards1.TabIndex = 19;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "TI",
+            "Recursos Humanos",
+            "Contabilidad",
+            "Finanzas"});
+            this.comboBox2.Location = new System.Drawing.Point(131, 319);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(209, 24);
+            this.comboBox2.TabIndex = 21;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 307);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 47);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Departamento";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // PuestosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,5 +387,7 @@
         private System.Windows.Forms.NumericUpDown txtCupo;
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label9;
     }
 }

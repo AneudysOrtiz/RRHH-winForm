@@ -128,6 +128,18 @@
     <Compile Include="Forms\Candidatos\CandidatoEditForm.Designer.cs">
       <DependentUpon>CandidatoEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Candidatos\CapacitacionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Candidatos\CapacitacionForm.Designer.cs">
+      <DependentUpon>CapacitacionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Candidatos\CandidatoExpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Candidatos\CandidatoExpForm.Designer.cs">
+      <DependentUpon>CandidatoExpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Candidatos\CandidatosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,12 @@
     </Compile>
     <Compile Include="Forms\Empleados\EmpleadosForm.Designer.cs">
       <DependentUpon>EmpleadosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CompetenciasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CompetenciasForm.Designer.cs">
+      <DependentUpon>CompetenciasForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -199,6 +217,12 @@
     <Compile Include="ReportForms\IngresoEmpleadoReportForm.Designer.cs">
       <DependentUpon>IngresoEmpleadoReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportForms\SalarioEmpleadosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\SalarioEmpleadosForm.Designer.cs">
+      <DependentUpon>SalarioEmpleadosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\IngresoEmpleadoReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -209,6 +233,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ContratoTrabajo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SalarioEmpleadosReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalarioEmpleadosReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="RRHHOrtizDataSet.Designer.cs">
@@ -222,9 +252,16 @@
     <Compile Include="StaticForms\LoadingForm.Designer.cs">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\CandidatoExpViewModel.cs" />
     <Compile Include="ViewModels\CandidatoViewModel.cs" />
     <EmbeddedResource Include="Forms\Candidatos\CandidatoEditForm.resx">
       <DependentUpon>CandidatoEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Candidatos\CapacitacionForm.resx">
+      <DependentUpon>CapacitacionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Candidatos\CandidatoExpForm.resx">
+      <DependentUpon>CandidatoExpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Candidatos\CandidatosForm.resx">
       <DependentUpon>CandidatosForm.cs</DependentUpon>
@@ -242,6 +279,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Empleados\EmpleadosForm.resx">
       <DependentUpon>EmpleadosForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CompetenciasForm.resx">
+      <DependentUpon>CompetenciasForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
@@ -274,6 +315,9 @@
     <EmbeddedResource Include="ReportForms\IngresoEmpleadoReportForm.resx">
       <DependentUpon>IngresoEmpleadoReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\SalarioEmpleadosForm.resx">
+      <DependentUpon>SalarioEmpleadosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\IngresoEmpleadoReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>IngresoEmpleadoReport.cs</LastGenOutput>
@@ -281,6 +325,10 @@
     <EmbeddedResource Include="Reports\ContratoTrabajo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ContratoTrabajo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalarioEmpleadosReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalarioEmpleadosReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="StaticForms\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>

@@ -138,5 +138,29 @@ namespace RRHHOrtiz
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var form = new CompetenciasForm();
+            AbrirFormInPanel(form, "Competencias");
+        }
+
+       
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var form = new CompetenciasForm();
+            AbrirFormInPanel(form, "Competencias");
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Desea salir del sistema?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dr == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
     }
 }
